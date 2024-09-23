@@ -1,0 +1,30 @@
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion {
+    @include tablet {
+        display: flex;
+    }
+
+    a {
+        color: v.$blanco;
+        font-size: 2.2rem;
+        display: block; /* Para que los enlaces puedan estar uno debajo del otro, en este caso utilizamos display: block; ya que .navegacion no hereda el display:flex y flex-direction: column; que hay en .barra por ser nieto y no hijo directo */
+        text-align: center;
+
+        @include tablet {
+            margin-right: 2rem;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
