@@ -15,7 +15,7 @@
     }
 
     a {
-        color: v.$blanco;
+        color: $blanco;
         font-size: 2.2rem;
         display: block; /* Para que los enlaces puedan estar uno debajo del otro, en este caso utilizamos display: block; ya que .navegacion no hereda el display:flex y flex-direction: column; que hay en .barra por ser nieto y no hijo directo */
         text-align: center;
