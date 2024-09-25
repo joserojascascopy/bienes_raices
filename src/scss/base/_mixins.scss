@@ -1,4 +1,5 @@
 /** Media Queries **/
+
 @mixin telefono {
     @media (min-width: #{$telefono}) {
         @content;
@@ -21,4 +22,17 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin boton($bgColor, $display) {
+    background-color: $bgColor;
+    color: $blanco;
+    font-weight: $bold;
+    padding: 1rem 0;
+    text-align: center;
+    display: $display;
+
+    &:hover {
+        background-color: darken($bgColor, 5);
+    }
 }
