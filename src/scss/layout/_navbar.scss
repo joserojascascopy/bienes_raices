@@ -52,3 +52,13 @@
         display: flex;
     }
 }
+
+.footer {
+    .navegacion {
+        display: block;
+
+        @include tablet {
+            display: flex;
+        }
+    }
+}
