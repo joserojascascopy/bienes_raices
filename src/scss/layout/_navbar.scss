@@ -11,9 +11,14 @@
 }
 
 .navegacion {
-    display: none;
+    // display: none;
+    visibility: hidden; // Con esto si se le puede dar animación
+    opacity: 0;
+    transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
 
     @include tablet {
+        visibility: visible;
+        opacity: 1;
         display: flex;
     }
 
@@ -46,15 +51,19 @@
 }
 
 .mostrar {
-    display: block;
+    // display: block;
+    visibility: visible;
+    opacity: 1;
 
-    @include tablet {
-        display: flex;
-    }
+    // @include tablet {
+    //     display: flex;
+    // }
 }
 
 .footer {
     .navegacion {
+        visibility: visible;
+        opacity: 1;
         display: block;
 
         @include tablet {
