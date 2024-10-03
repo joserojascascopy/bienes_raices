@@ -40,4 +40,12 @@ function darkModeUser() {
     }else {
         body.classList.remove('dark');
     }
+
+    preferenciaUsuario.addEventListener('change', function() {
+        if(preferenciaUsuario.matches) { 
+            body.classList.add('dark');
+        }else {
+            body.classList.remove('dark');
+        }
+    });
 }
